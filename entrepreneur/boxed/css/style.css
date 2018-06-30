@@ -1,0 +1,828 @@
+/* #Table of Contents
+
+1.  General
+2.  Navigation
+3.	Header
+4.	Elements
+5.	Footer
+6.	Media Queries
+================================================== */
+
+
+
+/* ========================= General ========================= */
+
+.affa-bg-img .bg-img-base.bg-img-blur {
+	-webkit-filter:blur(8px);
+	filter:blur(8px);
+}
+
+.post-heading-center-entrepreneur {
+	text-align:center;
+	padding:0 180px;
+	margin-bottom:40px;
+}
+	.post-heading-center-entrepreneur h2 {
+		color:#2b8dd6;
+		font-size:34px;
+		line-height:44px;
+		font-weight:700;
+		letter-spacing:.5px;
+		margin:0;
+	}
+	.text-white .post-heading-center-entrepreneur h2 { color:#FFF; }
+	.post-heading-center-entrepreneur p {
+		font-size:18px;
+		line-height:30px;
+		margin:12px 0 0;
+	}
+
+
+
+/* ========================= Navigation ========================= */
+
+/* Navigation Menu */
+.navbar.navbar-entrepreneur {
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	padding:20px 0;
+	z-index:1000;
+	-webkit-transition:background .3s ease, padding .3s ease, box-shadow .3s ease-out;
+	transition:background .3s ease, padding .3s ease, box-shadow .3s ease-out;
+}
+.navbar.navbar-entrepreneur.navbar-general, .navbar.navbar-entrepreneur.affix {
+	background-color:#FFF;
+	box-shadow:0 1px 5px rgba(0,0,0,.1);
+}
+.navbar.navbar-entrepreneur.affix { padding:15px 0; }
+.navbar.navbar-entrepreneur.navbar-landing { color:#FFF; }
+	.navbar.navbar-entrepreneur .navbar-brand {
+		position:relative;
+		height:auto;
+		padding:0;
+		margin:0;
+	}
+		.navbar.navbar-entrepreneur .navbar-brand img {
+			height:40px;
+			-webkit-transition:height .3s ease;
+			transition:height .3s ease;
+		}
+		.navbar.navbar-entrepreneur .navbar-brand .brand-secondary {
+			visibility:hidden;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			opacity:0;
+			-webkit-transition:visibility .3s ease, opacity .3s ease-out;
+			transition:visibility .3s ease, opacity .3s ease-out;
+		}
+		.navbar.navbar-entrepreneur.affix .navbar-brand.navbar-brand-affix .brand-secondary {
+			visibility:visible;
+			opacity:1;
+		}
+.navbar.navbar-entrepreneur .nav {
+	float:right;
+	height:40px;
+	font-size:15px;
+}
+	.navbar.navbar-entrepreneur .nav > li {
+		float:left;
+		padding:4px 20px;
+	}
+	.navbar.navbar-entrepreneur .nav > li:last-child { padding-right:0; }
+	.navbar.navbar-entrepreneur .nav > li.nav-menu-btn {
+		padding-top:1px;
+		padding-bottom:1px;
+	}
+		.navbar.navbar-entrepreneur .nav > li > a {
+			overflow:hidden;
+			float:left;
+			position:relative;
+		}
+		.navbar.navbar-entrepreneur .nav > li > a:after {
+			position:absolute;
+			bottom:0;
+			left:-20px;
+			width:20px;
+			height:2px;
+			content:'';
+			-webkit-transition:left .2s ease;
+			transition:left .2s ease;
+		}
+		.navbar.navbar-entrepreneur .nav > li > a:hover:after, .navbar.navbar-entrepreneur .nav > li > a.active:after { left:0; }
+		.navbar.navbar-entrepreneur.navbar-general .nav > li > a { color:#253c58; }
+		.navbar.navbar-entrepreneur.navbar-general .nav > li > a:after { background-color:#253c58; }
+		.navbar.navbar-entrepreneur.navbar-landing .nav > li > a { color:#FFF; }
+		.navbar.navbar-entrepreneur.navbar-landing.affix .nav > li > a { color:#253c58; }
+		.navbar.navbar-entrepreneur.navbar-landing .nav > li > a:after { background-color:#FFF; }
+		.navbar.navbar-entrepreneur.navbar-landing.affix .nav > li > a:after { background-color:#253c58; }
+		.navbar.navbar-entrepreneur .nav > li > a.nav-link { padding:2px 0; }
+		.navbar.navbar-entrepreneur .nav > li.nav-menu-btn > a {
+			font-size:14px;
+			font-weight:600;
+			padding:4px 20px;
+			border:1px solid #FFF;
+			outline:none;
+			border-radius:2px;
+		}
+		.navbar.navbar-entrepreneur .nav > li.nav-menu-btn > a:after { display:none; }
+		.navbar.navbar-entrepreneur.navbar-general .nav > li.nav-menu-btn > a, .navbar.navbar-entrepreneur.navbar-landing.affix .nav > li.nav-menu-btn > a { border-color:#253c58; }
+		.navbar.navbar-entrepreneur .nav > li.nav-menu-btn > a:hover, .navbar.navbar-entrepreneur .nav > li.nav-menu-btn > a.active {
+			color:#2b8dd6;
+			background-color:#FFF;
+		}
+		.navbar.navbar-entrepreneur.navbar-general .nav > li.nav-menu-btn > a:hover, .navbar.navbar-entrepreneur.navbar-general .nav > li.nav-menu-btn > a.active, .navbar.navbar-entrepreneur.navbar-landing.affix .nav > li.nav-menu-btn > a:hover, .navbar.navbar-entrepreneur.navbar-landing.affix .nav > li.nav-menu-btn > a.active {
+			color:#FFF;
+			background-color:#2b8dd6;
+			border-color:#2b8dd6;
+		}
+.navbar.navbar-entrepreneur .nav-btn-mobile {
+	display:none;
+	float:right;
+}
+	.navbar.navbar-entrepreneur .nav-btn-mobile a {
+		float:left;
+		color:#253c58;
+		font-size:34px;
+		line-height:40px;
+	}
+	.navbar.navbar-entrepreneur .nav-btn-mobile a:hover { color:#2b8dd6; }
+	.navbar.navbar-entrepreneur.navbar-landing .nav-btn-mobile a { color:#FFF; }
+	.navbar.navbar-entrepreneur.navbar-landing .nav-btn-mobile a:hover { color:rgba(255,255,255,.7); }
+	.navbar.navbar-entrepreneur.navbar-landing.affix .nav-btn-mobile a { color:#253c58; }
+	.navbar.navbar-entrepreneur.navbar-landing.affix .nav-btn-mobile a:hover { color:#2b8dd6; }
+
+
+
+/* ========================= Header ========================= */
+
+.header-entrepreneur .header-overlay {
+	background-image:linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,0));
+	padding-top:80px;
+}
+.header-entrepreneur .container {
+	padding-top:80px;
+	padding-bottom:80px;
+}
+.header-entrepreneur .header-form { max-width:480px; }
+	.header-entrepreneur .header-form h1 {
+		letter-spacing:1px;
+		margin-bottom:30px;
+	}
+	.header-entrepreneur .header-form form { padding:50px 40px; }
+	.header-entrepreneur .header-form .form-fields input, .header-entrepreneur .header-form .form-fields textarea {
+		width:100%;
+		margin-bottom:30px;
+		border:0;
+	}
+	.header-entrepreneur .header-form .form-fields textarea {
+		display:block;
+		height:132px;
+	}
+	.header-entrepreneur .header-form .form-fields input.error, .header-entrepreneur .header-form .form-fields textarea.error { box-shadow:0 0 0 2px #fe2020; }
+	.header-entrepreneur .header-form .form-info {
+		font-size:14px;
+		line-height:24px;
+		letter-spacing:normal;
+		margin-bottom:30px;
+	}
+	.header-entrepreneur .header-form .form-submit input[type="submit"] {
+		width:100%;
+		text-align:center;
+	}
+	.header-entrepreneur .header-form .submit-status { background-color:rgba(37,60,88,.9); }
+
+
+
+/* ========================= Elements ========================= */
+
+.affa-feature-icon-entrepreneur {
+	text-align:center;
+	margin-bottom:40px;
+	cursor:default;
+}
+.affa-feature-icon-entrepreneur.feature-icon-2 { text-align:left; }
+.affa-feature-icon-entrepreneur.feature-icon-3 {
+	position:relative;
+	min-height:70px;
+	text-align:left;
+	padding-left:95px;
+}
+	.affa-feature-icon-entrepreneur .feature-icon-wrap {
+		display:inline-block;
+		overflow:hidden;
+		position:relative;
+		width:70px;
+		height:70px;
+		color:#2b8dd6;
+		font-size:44px;
+		line-height:68px;
+		text-align:center;
+		background-color:#FFF;
+		margin-bottom:15px;
+		border:1px solid rgba(37,60,88,.1);
+		-webkit-transform:perspective(1px) translateZ(0);
+		transform:perspective(1px) translateZ(0);
+		-webkit-transition:color .3s ease, border .3s ease;
+		transition:color .3s ease, border .3s ease;
+	}
+	.affa-feature-icon-entrepreneur.feature-icon-2 .feature-icon-wrap { margin:0; }
+	.affa-feature-icon-entrepreneur.feature-icon-3 .feature-icon-wrap {
+		position:absolute;
+		top:0;
+		left:0;
+		margin:0;
+	}
+	.affa-feature-icon-entrepreneur:hover .feature-icon-wrap {
+		color:#FFF;
+		border-color:#2b8dd6;
+	}
+	.affa-feature-icon-entrepreneur .feature-icon-wrap:before {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		background-color:#2b8dd6;
+		content:'';
+		z-index:-1;
+		-webkit-transform:scale(0);
+		transform:scale(0);
+		-webkit-transition:transform .3s ease-out;
+		transition:transform .3s ease-out;
+	}
+	.affa-feature-icon-entrepreneur:hover .feature-icon-wrap:before {
+		-webkit-transform:scale(3);
+		transform:scale(3);
+	}
+	.affa-feature-icon-entrepreneur.feature-icon-2 .feature-icon-wrap {
+		width:60px;
+		height:60px;
+		font-size:36px;
+		line-height:58px;
+	}
+	.affa-feature-icon-entrepreneur h4 {
+		font-size:26px;
+		line-height:34px;
+		margin:0;
+	}
+	.affa-feature-icon-entrepreneur.feature-icon-2 h4 {
+		font-size:24px;
+		line-height:32px;
+	}
+	.affa-feature-icon-entrepreneur .feature-icon-heading {
+		position:relative;
+		min-height:60px;
+		padding-left:80px;
+	}
+		.affa-feature-icon-entrepreneur .feature-icon-heading .feature-icon-wrap {
+			position:absolute;
+			top:0;
+			left:0;
+		}
+		.affa-feature-icon-entrepreneur .feature-icon-heading h4 { padding-top:13px; }
+		.affa-feature-icon-entrepreneur.feature-icon-2 .feature-icon-heading h4 { padding-top:14px; }
+	.affa-feature-icon-entrepreneur p { margin:20px 0 0; }
+	.affa-feature-icon-entrepreneur.feature-icon-3 p { margin-top:5px; }
+	.affa-feature-icon-entrepreneur a {
+		display:inline-block;
+		font-size:15px;
+		line-height:24px;
+		font-weight:600;
+		margin-top:20px;
+	}
+		.affa-feature-icon-entrepreneur a .ion {
+			vertical-align:middle;
+			margin-left:6px;
+		}
+	.affa-feature-icon-entrepreneur .affa-progress-bar {
+		position:relative;
+		padding-right:55px;
+		margin:20px 0 0;
+	}
+		.affa-feature-icon-entrepreneur .affa-progress-bar > h4 {
+			position:absolute;
+			top:0;
+			right:0;
+			font-size:18px;
+			line-height:20px;
+		}
+
+.affa-portfolio-entrepreneur {
+	overflow:hidden;
+	position:relative;
+	height:240px;
+	margin-bottom:30px;
+}
+.affa-portfolio-entrepreneur.portfolio-lg { height:510px; }
+	.affa-portfolio-entrepreneur .portfolio-img {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		background-position:center;
+		background-repeat:no-repeat;
+		background-size:cover;
+		-webkit-transition:transform .3s ease-in-out;
+		transition:transform .3s ease-in-out;
+	}
+	.affa-portfolio-entrepreneur:hover .portfolio-img { transform:scale(1.15); }
+	.affa-portfolio-entrepreneur.portfolio-lg:hover .portfolio-img { transform:scale(1.1); }
+	.affa-portfolio-entrepreneur .portfolio-txt {
+		visibility:hidden;
+		overflow:hidden;
+		position:absolute;
+		top:15px;
+		right:15px;
+		bottom:15px;
+		left:15px;
+		font-size:14px;
+		line-height:24px;
+		text-align:center;
+		cursor:default;
+		opacity:0;
+		-webkit-transition:visibility .2s ease, opacity .2s ease-out;
+		transition:visibility .2s ease, opacity .2s ease-out;
+	}
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt {
+		font-size:16px;
+		line-height:28px;
+	}
+	.affa-portfolio-entrepreneur:hover .portfolio-txt {
+		visibility:visible;
+		opacity:1;
+	}
+		.affa-portfolio-entrepreneur .portfolio-txt .portfolio-txt-wrap {
+			position:absolute;
+			top:50%;
+			right:0;
+			left:0;
+			padding:0 15px;
+			margin-top:-80px;
+			-webkit-transform:scale(1.12);
+			transform:scale(1.12);
+			-webkit-transition:-webkit-transform .2s ease-out;
+			transition:transform .2s ease-out;
+		}
+		.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt .portfolio-txt-wrap {
+			padding:0 80px;
+			margin-top:-125px;
+		}
+		.affa-portfolio-entrepreneur:hover .portfolio-txt .portfolio-txt-wrap {
+			-webkit-transform:scale(1);
+			transform:scale(1);
+		}
+		.affa-portfolio-entrepreneur .portfolio-txt h4 {
+			font-size:20px;
+			line-height:28px;
+			margin:0;
+		}
+		.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt h4 {
+			font-size:30px;
+			line-height:38px;
+		}
+		.affa-portfolio-entrepreneur .portfolio-txt h4:after {
+			display:block;
+			width:50px;
+			height:2px;
+			background-color:rgba(255,255,255,.7);
+			content:'';
+			margin:10px auto 15px;
+		}
+		.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt h4:after {
+			width:100px;
+			margin-top:20px;
+			margin-bottom:40px;
+		}
+		.affa-portfolio-entrepreneur .portfolio-txt p { margin:0; }
+		.affa-portfolio-entrepreneur .portfolio-txt a {
+			display:inline-block;
+			font-size:13px;
+			line-height:22px;
+			padding:5px 15px;
+			margin-top:20px;
+			border:1px solid #FFF;
+		}
+		.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt a {
+			font-size:14px;
+			line-height:24px;
+			padding:7px 20px;
+			margin-top:30px;
+		}
+		.affa-portfolio-entrepreneur .portfolio-txt a:hover {
+			color:#2b8dd6;
+			background-color:#FFF;
+		}
+
+.affa-callout-entrepreneur { text-align:center; }
+	.affa-callout-entrepreneur h3 {
+		display:inline-block;
+		vertical-align:middle;
+		padding:11px 0;
+		margin:0 15px;
+	}
+	.affa-callout-entrepreneur a {
+		display:inline-block;
+		height:50px;
+		line-height:22px;
+		padding:13px 40px;
+		margin:0 15px;
+		border:1px solid #FFF;
+		border-radius:2px;
+	}
+	.affa-callout-entrepreneur a:hover {
+		color:#253c58;
+		background-color:#FFF;
+	}
+
+.affa-client-entrepreneur {
+	position:relative;
+	padding:0 30px;
+}
+.affa-client-entrepreneur:before {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	content:'';
+	background-color:rgba(255,255,255,.8);
+	-webkit-transition:visibility .2s ease, opacity .2s ease-out;
+	transition:visibility .2s ease, opacity .2s ease-out;
+}
+.affa-bg-grey .affa-client-entrepreneur:before { background-color:rgba(248,248,248,.8); }
+.affa-bg-dark .affa-client-entrepreneur:before { background-color:rgba(37,60,88,.8); }
+.affa-bg-color .affa-client-entrepreneur:before { background-color:rgba(43,141,214,.8); }
+.affa-client-entrepreneur:hover:before {
+	visibility:hidden;
+	opacity:0;
+}
+
+.affa-profile-entrepreneur {
+	text-align:center;
+	margin-bottom:40px;
+}
+	.affa-profile-entrepreneur figure { margin-bottom:20px; }
+	.affa-profile-entrepreneur h4 {
+		color:#2b8dd6;
+		font-size:30px;
+		line-height:38px;
+		margin:0;
+	}
+	.affa-profile-entrepreneur p {
+		color:#a9a9a9;
+		font-size:18px;
+		line-height:26px;
+		font-weight:600;
+		margin:5px 0 0;
+	}
+	.text-white .affa-profile-entrepreneur p { color:#FFF; }
+
+.affa-testimonial-entrepreneur {
+	text-align:center;
+	padding:0 140px;
+}
+	.affa-testimonial-entrepreneur .testimonial-txt {
+		font-size:24px;
+		line-height:38px;
+		font-style:italic;
+	}
+		.affa-testimonial-entrepreneur .testimonial-txt p { margin:0; }
+	.affa-testimonial-entrepreneur .testimonial-name { margin-top:30px; }
+		.affa-testimonial-entrepreneur .testimonial-name img {
+			width:80px;
+			height:80px;
+			margin:0 auto 20px;
+			border-radius:50%;
+		}
+		.affa-testimonial-entrepreneur .testimonial-name h4 {
+			font-size:18px;
+			line-height:26px;
+			margin:0;
+		}
+		.affa-testimonial-entrepreneur .testimonial-name p {
+			color:#999;
+			margin:2px 0 0;
+		}
+		.text-white .affa-testimonial-entrepreneur .testimonial-name p { color:#FFF; }
+
+.carousel-slider.slick-slider.testimonials-entrepreneur-slider { padding:70px 0 120px; }
+	.carousel-slider.testimonials-entrepreneur-slider .slick-dots { bottom:70px; }
+	.carousel-slider.slick-slider.testimonials-entrepreneur-slider .slick-dots li {
+		width:30px;
+		height:6px;
+	}
+		.carousel-slider.slick-slider.testimonials-entrepreneur-slider .slick-dots li button {
+			width:30px;
+			height:6px;
+			background-color:#2b8dd6;
+			opacity:.2;
+			border-radius:0;
+		}
+		.carousel-slider.slick-slider.testimonials-entrepreneur-slider .slick-dots li button:hover, .carousel-slider.slick-slider.testimonials-entrepreneur-slider .slick-dots li.slick-active button { opacity:1; }
+
+.affa-thumbnail, .affa-panel .panel:first-child .panel-heading h4 a, .affa-panel .panel:last-child .panel-heading h4 a.collapsed, .affa-panel .panel:last-child .panel-body, .affa-progress-bar .progress-bar-line, .affa-form-contact, .post-format-thumbnail, .post-format-gallery, .post-format-quote, .post-format-link,
+.post-paginations, .single .post-single-footer .tag-links a, .single .bypostauthor, .post-single-related .post-item.format-audio, .comments-area .comment-list, .comments-area .comment-respond, .widget_search .affa-form-search input[type="text"], .widget_search .affa-form-search input[type="submit"], .tagcloud a, .affa-posts-list-widget ul li .post-item-thumbnail, #secondary .widget-wrap { border-radius:0; }
+
+.affa-form-contact.form-entrepreneur {
+	background-color:#253c58;
+	padding:50px 40px;
+	border-radius:0;
+	box-shadow:none;
+}
+.text-white .affa-form-contact.form-entrepreneur { background-color:#FFF; }
+	.affa-form-contact.form-entrepreneur input[type="text"], .affa-form-contact.form-entrepreneur input[type="email"], .affa-form-contact.form-entrepreneur textarea { border-width:0; }
+	.text-white .affa-form-contact.form-entrepreneur input[type="text"], .text-white .affa-form-contact.form-entrepreneur input[type="email"], .text-white .affa-form-contact.form-entrepreneur textarea { border-width:1px; }
+	.affa-form-contact.form-entrepreneur textarea { height:132px; }
+	.text-white .affa-form-contact.form-entrepreneur textarea { height:134px; }
+	.affa-form-contact.form-entrepreneur input[type="text"].error, .affa-form-contact.form-entrepreneur input[type="email"].error, .affa-form-contact.form-entrepreneur textarea.error { box-shadow:0 0 0 2px #fe2020; }
+	.text-white .affa-form-contact.form-entrepreneur input[type="text"].error, .text-white .affa-form-contact.form-entrepreneur input[type="email"].error, .text-white .affa-form-contact.form-entrepreneur textarea.error { box-shadow:none; }
+	.affa-form-contact.form-entrepreneur .form-submit input[type="submit"] {
+		width:100%;
+		text-align:center;
+	}
+	.affa-form-contact.form-entrepreneur .submit-status { background-color:rgba(37,60,88,.9); }
+	.affa-form-contact.form-entrepreneur .submit-status p.success, .affa-form-contact.form-entrepreneur .submit-status p.error { color:#FFF; }
+
+div.zabuto_calendar {
+	font-family:Roboto, Arial, sans-serif;
+	color:#253c58;
+	font-weight:500;
+}
+	div.zabuto_calendar .table { background-color:#FFF; }
+	div.zabuto_calendar .table th, div.zabuto_calendar .table td {
+		padding-top:20px;
+		padding-bottom:20px;
+		border:0;
+	}
+	div.zabuto_calendar .table th {
+		font-weight:500;
+		text-transform:uppercase;
+	}
+	div.zabuto_calendar .table tr.calendar-month-header td {
+		font-weight:500;
+		background-color:#f5f5f5;
+		padding-top:23px;
+		padding-bottom:23px;
+	}
+		div.zabuto_calendar .table tr.calendar-month-header td span {
+			font-size:24px;
+			line-height:32px;
+			padding:0;
+		}
+		div.zabuto_calendar .table tr.calendar-month-header td[colspan="5"] span { cursor:default; }
+		div.zabuto_calendar .table tr.calendar-month-header td div.calendar-month-navigation span {
+			display:block;
+			font-size:30px;
+			-webkit-transition:color .2s ease;
+			transition:color .2s ease;
+		}
+		div.zabuto_calendar .table tr.calendar-month-header td div.calendar-month-navigation span:hover { color:#2b8dd6; }
+	div.zabuto_calendar .table tr.calendar-dow-header th {
+		background-color:#f5f5f5;
+		cursor:default;
+	}
+	div.zabuto_calendar div.calendar-month-navigation { padding:0; }
+	div.zabuto_calendar .table tr td div.day { cursor:default; }
+	div.zabuto_calendar .table tr td.event div.day, div.zabuto_calendar ul.legend li.event {
+		background-color:transparent;
+		cursor:pointer;
+	}
+	div.zabuto_calendar .badge-event, div.zabuto_calendar div.legend span.badge-event {
+		background-color:#2b8dd6;
+		-webkit-transition:background .2s ease;
+		transition:background .2s ease;
+	}
+	div.zabuto_calendar .table tr td.event:hover .badge-event, div.zabuto_calendar .table tr td.event:hover div.legend span.badge-event { background-color:#3ca3f0; }
+	div.zabuto_calendar div.legend { display:none; }
+
+
+
+/* ========================= Footer ========================= */
+
+.footer-entrepreneur {
+	text-align:center;
+	padding:60px 0 30px;
+}
+
+.footer-entrepreneur .footer-logo { margin-bottom:30px; }
+	.footer-entrepreneur .footer-logo img { max-height:40px; }
+
+.footer-entrepreneur .footer-socials {
+	padding:0;
+	margin-bottom:30px;
+}
+.footer-entrepreneur .footer-socials:after {
+	display:block;
+	width:150px;
+	height:2px;
+	background-color:rgba(255,255,255,.2);
+	content:'';
+	margin:50px auto 0;
+}
+	.footer-entrepreneur .footer-socials li {
+		display:inline-block;
+		list-style-type:none;
+		font-size:24px;
+		line-height:44px;
+		margin:0 25px;
+	}
+
+.footer-entrepreneur .footer-copyright {
+	font-size:15px;
+	line-height:24px;
+}
+	.footer-entrepreneur .footer-copyright p { margin:0; }
+
+
+
+/* ========================= Media Queries ========================= */
+
+@media (max-width: 1199px) {
+
+	.post-heading-center-entrepreneur { padding:0 80px; }
+
+	.navbar.navbar-entrepreneur .nav > li {
+		padding-right:14px;
+		padding-left:14px;
+	}
+	.navbar.navbar-entrepreneur .nav > li.nav-menu-btn > a {
+		padding-right:15px;
+		padding-left:15px;
+	}
+
+	.affa-client-entrepreneur { padding:0 20px; }
+
+	.affa-testimonial-entrepreneur { padding:0 40px; }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.affa-portfolio-entrepreneur .portfolio-txt {
+		top:10px;
+		right:10px;
+		bottom:10px;
+		left:10px;
+	}
+	.affa-portfolio-entrepreneur .portfolio-txt .portfolio-txt-wrap { padding:0 10px; }
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt .portfolio-txt-wrap { padding:0 20px; }
+
+}
+
+@media (max-width: 991px) {
+
+	.post-heading-center-entrepreneur { padding:0; }
+
+	.navbar.navbar-entrepreneur .nav > li {
+		padding-right:8px;
+		padding-left:8px;
+	}
+	.navbar.navbar-entrepreneur .nav > li.nav-menu-btn > a {
+		padding-right:10px;
+		padding-left:10px;
+	}
+
+	.affa-callout-entrepreneur h3 {
+		display:block;
+		margin:0;
+	}
+	.affa-callout-entrepreneur a { margin:11px 0; }
+
+	.affa-client-entrepreneur { padding:0 10px; }
+
+	.affa-testimonial-entrepreneur { padding:0 20px; }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.affa-portfolio-entrepreneur { height:270px; }
+	.affa-portfolio-entrepreneur.portfolio-lg { height:570px; }
+	.affa-portfolio-entrepreneur .portfolio-txt {
+		top:5px;
+		right:5px;
+		bottom:5px;
+		left:5px;
+	}
+	.affa-portfolio-entrepreneur .portfolio-txt .portfolio-txt-wrap {
+		padding:0 10px;
+		margin-top:-105px;
+	}
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt .portfolio-txt-wrap {
+		padding:0 20px;
+		margin-top:-140px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	body.nav-mobile-open .navbar.navbar-entrepreneur {
+		right:50%;
+		left:-50%;
+	}
+	.navbar.navbar-entrepreneur.affix { padding:13px 0; }
+	.navbar.navbar-entrepreneur.affix .navbar-brand img { height:34px; }
+	.navbar.navbar-entrepreneur .nav { display:none; }
+	.navbar.navbar-entrepreneur .nav-btn-mobile { display:block; }
+	.navbar.navbar-entrepreneur.affix .nav-btn-mobile a { line-height:1; }
+
+	.header-entrepreneur .container {
+		padding-top:60px;
+		padding-bottom:60px;
+	}
+	.header-entrepreneur .header-form { max-width:none; }
+	.header-entrepreneur .header-form h1 {
+		font-size:36px;
+		line-height:46px;
+	}
+
+	.affa-feature-icon-entrepreneur.text-center-sm { text-align:center; }
+	.affa-feature-icon-entrepreneur.feature-icon-3, .affa-feature-icon-entrepreneur .feature-icon-heading {
+		min-height:0;
+		padding-left:0;
+	}
+	.affa-feature-icon-entrepreneur .feature-icon-heading .feature-icon-wrap, .affa-feature-icon-entrepreneur.feature-icon-3 .feature-icon-wrap {
+		position:static;
+		top:auto;
+		left:auto;
+		margin-bottom:10px;
+	}
+	.affa-feature-icon-entrepreneur .feature-icon-heading h4, .affa-feature-icon-entrepreneur.feature-icon-2 .feature-icon-heading h4 { padding-top:0; }
+
+	.affa-portfolio-entrepreneur { height:300px; }
+	.affa-portfolio-entrepreneur.portfolio-lg { height:440px; }
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt {
+		font-size:15px;
+		line-height:26px;
+	}
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt .portfolio-txt-wrap {
+		padding:0 15px;
+		margin-top:-140px;
+	}
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt h4 {
+		font-size:24px;
+		line-height:34px;
+	}
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt h4:after {
+		margin-top:15px;
+		margin-bottom:30px;
+	}
+
+	.affa-testimonial-entrepreneur .testimonial-txt {
+		font-size:20px;
+		line-height:34px;
+	}
+
+	.carousel-slider.slick-slider.testimonials-entrepreneur-slider { padding:40px 0 90px; }
+	.carousel-slider.testimonials-entrepreneur-slider .slick-dots { bottom:40px; }
+
+}
+
+@media (max-width: 640px) {
+
+	body.nav-mobile-open .navbar.navbar-entrepreneur {
+		right:60%;
+		left:-60%;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	body.nav-mobile-open .navbar.navbar-entrepreneur {
+		right:70%;
+		left:-70%;
+	}
+
+	.header-entrepreneur .header-form form { padding:30px 25px; }
+	.header-entrepreneur .header-form .form-fields input, .header-entrepreneur .header-form .form-fields textarea, .header-entrepreneur .header-form .form-info { margin-bottom:20px; }
+
+	.affa-form-contact.form-entrepreneur { padding:30px 25px; }
+
+	.footer-entrepreneur .footer-socials li { margin:0 15px; }
+
+}
+
+@media (max-width: 400px) {
+
+	body.nav-mobile-open .navbar.navbar-entrepreneur {
+		right:80%;
+		left:-80%;
+	}
+
+	.affa-portfolio-entrepreneur .portfolio-txt .portfolio-txt-wrap {
+		top:11%;
+		margin-top:0;
+	}
+	.affa-portfolio-entrepreneur.portfolio-lg .portfolio-txt .portfolio-txt-wrap {
+		top:6%;
+		margin-top:0;
+	}
+
+}

@@ -1,0 +1,843 @@
+/* #Table of Contents
+
+1.  General
+2.  Navigation
+3.	Header
+4.	Elements
+5.	Footer
+6.	Media Queries
+================================================== */
+
+
+/* ========================= General ========================= */
+
+.text-md-course {
+	font-family:Roboto, Arial, sans-serif;
+	color:#253c58;
+	font-size:18px;
+	font-weight:500;
+}
+.text-white .text-md-course { color:#FFF; }
+
+.post-heading-left-course { margin-bottom:40px; }
+.post-heading-center-course {
+	text-align:center;
+	margin-bottom:40px;
+}
+	.post-heading-left-course h2, .post-heading-center-course h2 {
+		font-size:30px;
+		line-height:38px;
+		margin:0;
+	}
+	.post-heading-left-course p, .post-heading-center-course p {
+		font-family:Roboto, Arial, sans-serif;
+		color:#a9a9a9;
+		font-size:18px;
+		font-weight:500;
+		margin:5px 0 0;
+	}
+	.text-white .post-heading-left-course p, .text-white .post-heading-center-course p { color:#FFF; }
+
+
+
+/* ========================= Navigation ========================= */
+
+/* Navigation Menu */
+.navbar-wrap {
+	overflow:hidden;
+	position:relative;
+	height:80px;
+	background-color:#FFF;
+}
+.navbar.navbar-course {
+	position:absolute;
+	top:0;
+	right:0;
+	left:0;
+	color:rgba(255,255,255,.6);
+	background-color:#253c58;
+	padding:20px 0;
+	z-index:1000;
+	-webkit-transition:background .3s ease, padding .3s ease, box-shadow .3s ease-out;
+	transition:background .3s ease, padding .3s ease, box-shadow .3s ease-out;
+}
+.navbar.navbar-course.affix {
+	position:fixed;
+	padding:15px 0;
+}
+	.navbar.navbar-course .navbar-brand {
+		position:relative;
+		height:auto;
+		padding:0;
+		margin:0;
+	}
+		.navbar.navbar-course .navbar-brand img {
+			height:40px;
+			-webkit-transition:height .3s ease;
+			transition:height .3s ease;
+		}
+		.navbar.navbar-course .navbar-brand .brand-secondary {
+			visibility:hidden;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			opacity:0;
+			-webkit-transition:visibility .3s ease, opacity .3s ease-out;
+			transition:visibility .3s ease, opacity .3s ease-out;
+		}
+		.navbar.navbar-course.affix .navbar-brand.navbar-brand-affix .brand-secondary {
+			visibility:visible;
+			opacity:1;
+		}
+.navbar.navbar-course .nav {
+	float:right;
+	height:40px;
+	font-size:15px;
+}
+	.navbar.navbar-course .nav > li {
+		float:left;
+		padding:6px 20px;
+	}
+	.navbar.navbar-course .nav > li:last-child { padding-right:0; }
+	.navbar.navbar-course .nav > li.nav-menu-btn {
+		padding-top:1px;
+		padding-bottom:1px;
+	}
+		.navbar.navbar-course .nav > li > a {
+			float:left;
+			position:relative;
+			color:rgba(255,255,255,.6);
+		}
+		.navbar.navbar-course .nav > li > a:hover, .navbar.navbar-course .nav > li > a.active { color:#FFF; }
+		.navbar.navbar-course .nav > li > a.nav-link { padding:0; }
+		.navbar.navbar-course .nav > li.nav-menu-btn > a {
+			color:#FFF;
+			font-size:14px;
+			font-weight:600;
+			padding:4px 36px;
+			outline:none;
+			border:1px solid #FFF;
+			border-radius:2px;
+		}
+		.navbar.navbar-course .nav > li.nav-menu-btn > a:hover, .navbar.navbar-course .nav > li.nav-menu-btn > a.active {
+			background-color:#2b8dd6;
+			border-color:#2b8dd6;
+		}
+.navbar.navbar-course .nav-btn-mobile {
+	display:none;
+	float:right;
+}
+	.navbar.navbar-course .nav-btn-mobile a {
+		float:left;
+		color:rgba(255,255,255,.6);
+		font-size:34px;
+		line-height:40px;
+	}
+	.navbar.navbar-course .nav-btn-mobile a:hover { color:#FFF; }
+
+
+
+/* ========================= Header ========================= */
+
+.header-course {
+	position:relative;
+	min-height:600px;
+}
+	.header-course .header-content {
+		position:absolute;
+		right:0;
+        bottom:0;
+		left:0;
+		text-align:center;
+	}
+		.header-course .header-content h1 { margin:0; }
+		.header-course .header-content p {
+			font-size:18px;
+			line-height:30px;
+			margin:15px 0 0;
+		}
+	.header-course .bg-img-base { display:none; }
+
+
+
+/* ========================= Elements ========================= */
+
+.affa-block-course {
+	position:relative;
+	color:#555;
+	background-color:#FFF;
+	padding:50px 30px;
+	z-index:1;
+	border-radius:4px;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.1);
+}
+	.affa-block-course.block-half-course { margin-bottom:-150px; }
+	.affa-block-course h1, .affa-block-course h2, .affa-block-course h3, .affa-block-course h4, .affa-block-course h5, .affa-block-course h6 { color:#253c58; }
+		.affa-block-course h1 span, .affa-block-course h2 span, .affa-block-course h3 span, .affa-block-course h4 span, .affa-block-course h5 span, .affa-block-course h6 span { color:#2b8dd6; }
+
+.affa-feature-icon-course {
+    position:relative;
+	margin-bottom:40px;
+	cursor:default;
+}
+.affa-feature-icon-course.feature-icon-2 { margin-bottom:30px; }
+.affa-block-course .affa-feature-icon-course { margin-bottom:0; }
+    .affa-feature-icon-course .feature-icon-wrap {
+	    display:inline-block;
+		overflow:hidden;
+		position:relative;
+		width:70px;
+		height:70px;
+		color:#2b8dd6;
+		font-size:44px;
+		line-height:68px;
+		text-align:center;
+		background-color:#FFF;
+		border:1px solid #e9e9e9;
+		border-radius:50%;
+		box-shadow:0 0 0 3px rgba(0,0,0,.02);
+		-webkit-transform:perspective(1px) translateZ(0);
+		transform:perspective(1px) translateZ(0);
+		-webkit-transition:color .3s ease, box-shadow .3s ease-out;
+		transition:color .3s ease, box-shadow .3s ease-out;
+	}
+	.affa-feature-icon-course:hover .feature-icon-wrap {
+		color:#FFF;
+		line-height:70px;
+		border:0;
+		box-shadow:0 2px 8px rgba(0,0,0,.3);
+	}
+	.affa-feature-icon-course .feature-icon-wrap:before {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		background-color:#2b8dd6;
+		content:'';
+		z-index:-1;
+		border-radius:50%;
+		-webkit-transform:scale(0);
+		transform:scale(0);
+		-webkit-transition:transform .3s ease-out;
+		transition:transform .3s ease-out;
+	}
+	.affa-feature-icon-course:hover .feature-icon-wrap:before {
+		-webkit-transform:scale(3);
+		transform:scale(3);
+	}
+	.affa-feature-icon-course.feature-icon-2 .feature-icon-wrap {
+		width:60px;
+		height:60px;
+		font-size:36px;
+		line-height:58px;
+		margin-bottom:1rem;
+	}
+	.affa-feature-icon-course.feature-icon-2:hover .feature-icon-wrap { line-height:60px; }
+	.affa-feature-icon-course.feature-icon-sm .feature-icon-wrap {
+		width:50px;
+		height:50px;
+		font-size:28px;
+		line-height:48px;
+	}
+	.affa-feature-icon-course.feature-icon-sm:hover .feature-icon-wrap { line-height:50px; }
+	.affa-feature-icon-course h4 {
+		font-size:26px;
+		line-height:34px;
+		margin:0;
+	}
+	.affa-feature-icon-course.feature-icon-2 h4 {
+		font-size:24px;
+		line-height:32px;
+	}
+	.affa-feature-icon-course.feature-icon-sm h4 {
+		font-size:18px;
+		line-height:26px;
+	}
+	.affa-feature-icon-course .feature-icon-txt {
+		min-height:70px;
+		padding-left:95px;
+	}
+	.affa-feature-icon-course .feature-icon-wrap {
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.affa-feature-icon-course p { margin:10px 0 0; }
+	.affa-feature-icon-course.feature-icon-2 p { margin-top:.75rem; }
+	.affa-feature-icon-course.feature-icon-sm p { margin-top:.625rem; }
+
+.affa-material-course {
+	overflow:hidden;
+	margin-bottom:30px;
+	cursor:default;
+	border-radius:4px;
+    -webkit-transition:box-shadow .2s ease-out;
+    transition:box-shadow .2s ease-out;
+}
+    .affa-material-course:hover { box-shadow:0 0 30px 0 rgba(0,0,0,.1); }
+	.affa-material-course .material-txt {
+		color:#555;
+		background-color:#FFF;
+		padding:30px;
+	}
+		.affa-material-course .material-txt h5 {
+			color:#253c58;
+			margin-bottom:8px;
+			-webkit-transition:color .2s ease-out;
+			transition:color .2s ease-out;
+		}
+		.affa-material-course:hover .material-txt h5 { color:#2b8dd6; }
+		.affa-material-course .material-txt p { margin:0; }
+
+.affa-teacher-course {
+	color:#555;
+    background-color:#FFF;
+    margin-bottom:30px;
+	cursor:default;
+	border:1px solid #EEE;
+	border-radius:4px;
+	-webkit-transition:box-shadow .2s ease-out;
+	transition:box-shadow .2s ease-out;
+}
+.text-white .affa-teacher-course { border-color:#FFF; }
+.affa-teacher-course:hover { box-shadow:0 0 30px 0 rgba(0,0,0,.1); }
+	.affa-teacher-course .teacher-body { padding:30px; }
+		.affa-teacher-course .teacher-body .teacher-header {
+            position:relative;
+			min-height:60px;
+			padding:3px 0 0 80px;
+		}
+            .affa-teacher-course .teacher-body .teacher-header img {
+                position:absolute;
+                top:0;
+                left:0;
+                width:60px;
+                height:60px;
+                border-radius:50%;
+			}
+			.affa-teacher-course .teacher-body .teacher-header h5 {
+				color:#253c58;
+				margin:0;
+			}
+			.affa-teacher-course .teacher-body .teacher-header p {
+				color:#999;
+				margin:0;
+			}
+		.affa-teacher-course .teacher-body .teacher-desc { margin-top:20px; }
+			.affa-teacher-course .teacher-body .teacher-desc p { margin:0; }
+    .affa-teacher-course .teacher-footer {
+        text-align:center;
+        padding:10px 30px;
+        border-top:1px solid #EEE;
+    }
+        .affa-teacher-course .teacher-footer ul.teacher-social {
+            padding:0;
+            margin:0;
+		}
+            .affa-teacher-course .teacher-footer ul.teacher-social li {
+                display:inline-block;
+				list-style-type:none;
+				margin:10px 8px;
+            }
+                .affa-teacher-course .teacher-footer ul.teacher-social li a {
+                    display:inline-block;
+                    width:36px;
+                    height:36px;
+					color:#2b8dd6;
+					font-size:18px;
+					line-height:34px;
+					border:1px solid #EEE;
+					border-radius:50%;
+				}
+				.affa-teacher-course .teacher-footer ul.teacher-social li a:hover {
+                    color:#FFF;
+                    background-color:#2b8dd6;
+                    border-color:#2b8dd6;
+				}
+
+.affa-client-course {
+	position:relative;
+	padding:0 20px;
+}
+.affa-client-course:before {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	content:'';
+	background-color:rgba(255,255,255,.8);
+	-webkit-transition:visibility .2s ease, opacity .2s ease-out;
+	transition:visibility .2s ease, opacity .2s ease-out;
+}
+.affa-bg-grey .affa-client-course:before { background-color:rgba(248,248,248,.8); }
+.affa-bg-dark .affa-client-course:before { background-color:rgba(37,60,88,.8); }
+.affa-bg-color .affa-client-course:before { background-color:rgba(43,141,214,.8); }
+.affa-client-course:hover:before {
+	visibility:hidden;
+	opacity:0;
+}
+
+.affa-counter-course {
+	text-align:center;
+	margin-bottom:40px;
+}
+.affa-block-course .affa-counter-course { margin:0; }
+    .affa-counter-course h3 {
+		color:#2b8dd6;
+        font-size:54px;
+        line-height:1;
+        font-weight:700;
+		margin:0;
+	}
+	.text-white .affa-counter-course h3 { color:#FFF; }
+	.affa-block-course .affa-counter-course h3 { color:#2b8dd6; }
+	.affa-counter-course h4 { margin:10px 0 0; }
+	.affa-counter-course p { margin:15px 0 0; }
+
+.carousel-slider.testimonials-course-slider { border:1px solid #2b8dd6; }
+.text-white .carousel-slider.testimonials-course-slider { border:0; }
+	.carousel-slider.testimonials-course-slider .slick-dots { bottom:0; }
+		.carousel-slider.testimonials-course-slider .slick-dots li {
+			height:10px;
+			margin:0;
+		}
+		.carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(1) { width:100%; }
+		.carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(2), .carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(2) ~ li { width:50%; }
+		.carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(3), .carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(3) ~ li { width:33.3333%; }
+		.carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(4), .carousel-slider.testimonials-course-slider .slick-dots li:first-child:nth-last-child(4) ~ li { width:25%; }
+			.carousel-slider.testimonials-course-slider .slick-dots li button {
+				width:100%;
+	            height:10px;
+				background-color:rgba(43,141,214,.5);
+				border-radius:0;
+			}
+			.carousel-slider.testimonials-course-slider .slick-dots li button:hover, .carousel-slider.testimonials-course-slider .slick-dots li.slick-active button { background-color:#2b8dd6; }
+
+.affa-testimonial-course {
+	background-color:rgba(43,141,214,.05);
+	padding:60px 60px 70px;
+}
+.text-white .affa-testimonial-course { background-color:#FFF; }
+	.affa-testimonial-course .testimonial-txt {
+		font-family:Roboto, Arial, sans-serif;
+		color:#253c58;
+		font-size:24px;
+		line-height:36px;
+		text-align:left;
+		font-style:italic;
+	}
+		.affa-testimonial-course .testimonial-txt p { margin:0; }
+	.affa-testimonial-course .testimonial-name {
+		position:relative;
+		min-height:50px;
+		padding:1px 0 0 70px;
+		margin-top:20px;
+	}
+		.affa-testimonial-course .testimonial-name img {
+			position:absolute;
+			top:0;
+			left:0;
+			width:50px;
+			height:50px;
+			border-radius:50%;
+		}
+		.affa-testimonial-course .testimonial-name h4 {
+			color:#555;
+			font-size:16px;
+			line-height:24px;
+			margin:0;
+			-webkit-transition:color .2s ease;
+			transition:color .2s ease;
+		}
+		.affa-testimonial-course .testimonial-name p {
+			font-family:Roboto, Arial, sans-serif;
+			color:#999;
+			font-size:15px;
+			line-height:24px;
+			margin:0;
+		}
+
+.affa-subscribe-course .subscribe-heading {
+	text-align:center;
+	margin-bottom:30px;
+}
+	.affa-subscribe-course .subscribe-heading h2 {
+		font-size:30px;
+		line-height:38px;
+		margin:0;
+	}
+	.affa-subscribe-course .subscribe-heading p {
+		font-family:Roboto, Arial, sans-serif;
+		color:#a9a9a9;
+		font-size:18px;
+		font-weight:500;
+		margin:5px 0 0;
+	}
+	.text-white .affa-subscribe-course .subscribe-heading p { color:#FFF; }
+.affa-subscribe-course form {
+	position:relative;
+	max-width:760px;
+	padding-right:160px;
+	margin:0 auto;
+}
+	.affa-subscribe-course form input[type="text"], .affa-subscribe-course form input[type="email"] {
+		border-right-width:0;
+		border-radius:2px 0 0 2px;
+	}
+	.text-white .affa-subscribe-course form input[type="text"], .text-white .affa-subscribe-course form input[type="email"] { border:0; }
+	.affa-subscribe-course form input[type="submit"] {
+		position:absolute;
+		top:0;
+		right:0;
+		width:160px;
+		text-align:center;
+		padding-right:0;
+		padding-left:0;
+		border-radius:0 2px 2px 0;
+	}
+
+.affa-signup-course { margin-bottom:40px; }
+	.affa-signup-course > form {
+		background-color:#2b8dd6;
+		padding:40px;
+		border-radius:4px;
+		box-shadow:0 5px 30px 0 rgba(0,0,0,.15);
+	}
+	.affa-signup-course h2 {
+		color:#FFF;
+		font-size:30px;
+		line-height:38px;
+		margin-bottom:20px;
+	}
+	.affa-signup-course p {
+		color:#FFF;
+		margin:0;
+	}
+		.affa-signup-course p a { color:#FFF; }
+		.affa-signup-course p a:hover { color:rgba(255,255,255,.8); }
+	.affa-signup-course .form-desc { margin-bottom:30px; }
+	.affa-signup-course .form-fields input {
+		width:100%;
+		margin-bottom:30px;
+		border:0;
+	}
+	.affa-signup-course .form-fields input[type="text"].error, .affa-signup-course .form-fields input[type="email"].error { box-shadow:0 0 0 2px #fe2020; }
+	.affa-signup-course .form-submit input[type="submit"] {
+		width:100%;
+		text-align:center;
+		background-color:#253c58;
+	}
+	.affa-signup-course .form-submit input[type="submit"]:hover { background-color:#3b577a; }
+	.affa-signup-course .form-submit input[type="submit"]:disabled, .affa-signup-course .form-submit input[type="submit"]:disabled:hover {
+		color:#9a9a9a !important;
+		background-color:#e0e0e0;
+	}
+	.affa-signup-course .form-info {
+		font-size:14px;
+		line-height:22px;
+		margin:20px 0 0;
+	}
+	.affa-signup-course .submit-status { border-radius:4px; }
+		.affa-signup-course .submit-status p {
+			font-size:16px;
+			line-height:26px;
+		}
+
+
+
+/* ========================= Footer ========================= */
+
+.footer-course .footer-widgets { padding:60px 0 20px; }
+	.footer-course .footer-widgets .widget { margin-bottom:40px; }
+		.footer-course .footer-widgets .widget .widget-title { margin-bottom:25px; }
+
+.footer-course .footer-nav { padding:27px 0; }
+	.footer-course .footer-nav .container {
+		position:relative;
+		min-height:28px;
+	}
+	.footer-course .footer-nav .footer-logo {
+		float:left;
+		line-height:0;
+	}
+		.footer-course .footer-nav .footer-logo img { height:28px; }
+	.footer-course .footer-nav .footer-copyright {
+		position:absolute;
+		top:0;
+		right:300px;
+		left:300px;
+		font-size:15px;
+		text-align:center;
+		margin:0;
+	}
+		.footer-course .footer-nav .footer-copyright p { margin:0; }
+	.footer-course .footer-nav .footer-socials {
+		float:right;
+		padding:0;
+		margin:0 -15px 0 0;
+	}
+		.footer-course .footer-nav .footer-socials li {
+			display:inline-block;
+			list-style-type:none;
+			font-size:20px;
+			line-height:28px;
+			vertical-align:top;
+			margin:0 15px;
+		}
+
+
+
+/* ========================= Media Queries ========================= */
+
+@media (max-width: 1199px) {
+
+	.navbar.navbar-course .nav > li {
+		padding-right:14px;
+		padding-left:14px;
+	}
+	.navbar.navbar-course .nav > li.nav-menu-btn > a {
+		padding-right:15px;
+		padding-left:15px;
+	}
+
+	.header-course .header-content h1 {
+		font-size:38px;
+		line-height:48px;
+	}
+
+	.affa-block-course { padding:40px 25px; }
+
+	.affa-client-course { padding:0 15px; }
+
+	.affa-testimonial-course { padding:45px 45px 55px; }
+
+	.footer-course .footer-nav .footer-copyright {
+		right:260px;
+		left:260px;
+	}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.affa-material-course .material-txt, .affa-teacher-course .teacher-body { padding:25px; }
+
+	.affa-teacher-course .teacher-footer { padding:12px 25px; }
+	.affa-teacher-course .teacher-footer ul.teacher-social li { margin:8px 6px; }
+
+	.affa-signup-course > form {
+  		padding-right:30px;
+  		padding-left:30px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	.navbar.navbar-course .nav > li {
+		padding-right:8px;
+		padding-left:8px;
+	}
+	.navbar.navbar-course .nav > li.nav-menu-btn > a {
+		padding-right:10px;
+		padding-left:10px;
+	}
+
+	.header-course .header-content h1 {
+		font-size:34px;
+		line-height:44px;
+	}
+
+	.affa-block-course { padding:30px 20px; }
+
+	.affa-client-course { padding:0 10px; }
+
+	.affa-testimonial-course { padding:30px 30px 40px; }
+
+	.footer-course .footer-nav .footer-copyright {
+		right:250px;
+		left:165px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.affa-material-course .material-txt, .affa-teacher-course .teacher-body { padding:20px; }
+
+	.affa-teacher-course .teacher-body .teacher-header {
+		min-height:0;
+		padding:0;
+	}
+	.affa-teacher-course .teacher-body .teacher-header img {
+		position:static;
+		top:auto;
+		left:auto;
+		width:80px;
+		height:80px;
+		margin-bottom:12px;
+	}
+	.affa-teacher-course .teacher-footer { padding:16px 20px; }
+	.affa-teacher-course .teacher-footer ul.teacher-social li { margin:4px 2px; }
+
+}
+
+@media (max-width: 767px) {
+
+	body.nav-mobile-open .navbar.navbar-course.affix {
+		right:50%;
+		left:-50%;
+	}
+	.navbar.navbar-course.affix { padding:13px 0; }
+	.navbar.navbar-course.affix .navbar-brand img { height:34px; }
+	.navbar.navbar-course .nav { display:none; }
+	.navbar.navbar-course .nav-btn-mobile { display:block; }
+	.navbar.navbar-course.affix .nav-btn-mobile a { line-height:1; }
+
+	.header-course {
+		height:auto !important;
+		min-height:0;
+		padding-top:300px;
+	}
+	.header-course .header-content {
+		position:static;
+		right:auto;
+		bottom:auto;
+		left:auto;
+	}
+	.header-course .bg-img-base { display:block; }
+
+	.affa-block-course { padding:30px; }
+
+	.affa-feature-icon-course .feature-icon-wrap {
+		position:relative;
+		top:auto;
+		left:auto;
+		margin-bottom:10px;
+	}
+	.affa-feature-icon-course .feature-icon-txt {
+		min-height:0;
+		padding:0;
+	}
+
+	.affa-testimonial-course .testimonial-txt {
+        font-size:20px;
+		line-height:32px;
+	}
+
+	.affa-block-course .affa-counter-course { margin-bottom:40px; }
+	.affa-block-course .row > div:last-child .affa-counter-course { margin:0; }
+
+	.footer-course .footer-nav {
+		text-align:center;
+		padding:20px 0;
+	}
+	.footer-course .footer-nav .footer-logo, .footer-course .footer-nav .footer-socials { float:none; }
+	.footer-course .footer-nav .footer-logo { padding:10px 0; }
+	.footer-course .footer-nav .footer-logo img {
+		height:auto;
+		max-height:40px;
+	}
+	.footer-course .footer-nav .footer-copyright {
+		position:static;
+		top:auto;
+		right:auto;
+		left:auto;
+		padding:10px 0;
+	}
+	.footer-course .footer-nav .footer-socials li {
+		font-size:24px;
+		line-height:44px;
+	}
+
+}
+
+@media (max-width: 640px) {
+
+	body.nav-mobile-open .navbar.navbar-course.affix {
+		right:60%;
+		left:-60%;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	body.nav-mobile-open .navbar.navbar-course.affix {
+		right:70%;
+		left:-70%;
+	}
+
+	.affa-signup-course > form { padding:30px 25px; }
+	.affa-signup-course h2 {
+		font-size:26px;
+		line-height:34px;
+  		letter-spacing:.1px;
+	}
+	.affa-signup-course .form-desc, .affa-signup-course .form-fields input, .affa-signup-course .form-fields select, .affa-signup-course .form-fields textarea { margin-bottom:20px; }
+
+}
+
+@media (max-width: 400px) {
+
+	body.nav-mobile-open .navbar.navbar-course.affix {
+		right:80%;
+		left:-80%;
+	}
+
+	.affa-block-course {
+		padding-right:20px;
+		padding-left:20px;
+	}
+
+	.affa-material-course .material-txt, .affa-teacher-course .teacher-body { padding:20px; }
+
+	.affa-teacher-course .teacher-body { text-align:center; }
+	.affa-teacher-course .teacher-body .teacher-header {
+		min-height:0;
+		padding:0;
+	}
+	.affa-teacher-course .teacher-body .teacher-header img {
+		position:static;
+		top:auto;
+		left:auto;
+		width:80px;
+		height:80px;
+		margin-bottom:12px;
+	}
+	.affa-teacher-course .teacher-footer { padding:12px 20px; }
+	.affa-teacher-course .teacher-footer ul.teacher-social li { margin:8px 6px; }
+
+	.affa-testimonial-course .testimonial-txt { text-align:center; }
+	.affa-testimonial-course .testimonial-name {
+		min-height:0;
+		text-align:center;
+		padding:0;
+	}
+	.affa-testimonial-course .testimonial-name img {
+		position:static;
+		top:auto;
+		left:auto;
+		width:70px;
+		height:70px;
+		margin:0 auto 12px;
+	}
+
+	.affa-subscribe-course form { padding:0; }
+	.affa-subscribe-course form input[type="text"], .affa-subscribe-course form input[type="email"] {
+		border-right-width:1px;
+		border-radius:2px;
+	}
+	.affa-subscribe-course form input[type="submit"] {
+		position:static;
+		top:auto;
+		right:auto;
+		width:100%;
+		margin-top:15px;
+		border-radius:2px;
+	}
+
+}

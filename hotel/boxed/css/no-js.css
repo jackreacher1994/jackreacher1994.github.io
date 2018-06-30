@@ -1,0 +1,16 @@
+.carousel-slider > div { display:none; }
+.carousel-slider > div:first-child { display:block; }
+.carousel-slider .slick-slide {
+	float:none;
+	width:auto;
+}
+
+.animation { visibility:visible; }
+
+.post-format-video iframe, .post-format-audio iframe { background-color:#f4f4f4; }
+
+.affa-room-hotel {
+	max-width:600px;
+	margin-right:auto;
+	margin-left:auto;
+}

@@ -1,0 +1,788 @@
+/* #Table of Contents
+
+1.  General
+2.  Navigation
+3.	Header
+4.	Elements
+5.	Footer
+6.	Media Queries
+================================================== */
+
+
+
+/* ========================= General ========================= */
+
+.btn-custom.btn-white, input[type="button"].btn-white, input[type="submit"].btn-white, input[type="reset"].btn-white, button.btn-white { color:#253c58 !important; }
+.btn-custom .ion, button .ion { margin-right:20px; }
+
+.post-heading-left-medical { margin-bottom:40px; }
+.post-heading-center-medical {
+	text-align:center;
+	margin-bottom:40px;
+}
+	.post-heading-left-medical h2, .post-heading-center-medical h2 {
+		color:#2b8dd6;
+		font-size:42px;
+		line-height:52px;
+		margin:0;
+	}
+	.text-white .post-heading-left-medical h2, .text-white .post-heading-center-medical h2 { color:#FFF; }
+	.post-heading-left-medical p, .post-heading-center-medical p {
+		font-family:Roboto, Arial, sans-serif;
+		color:#a9a9a9;
+		font-size:18px;
+		font-weight:500;
+		margin:2px 0 0;
+	}
+	.text-white .post-heading-left-medical p, .text-white .post-heading-center-medical p { color:#FFF; }
+
+
+
+/* ========================= Navigation ========================= */
+
+/* Navigation Menu */
+.navbar-wrap {
+	overflow:hidden;
+	position:relative;
+	height:86px;
+	background-color:#FFF;
+}
+.navbar.navbar-medical {
+	position:absolute;
+	top:0;
+	right:0;
+	left:0;
+	color:#a9a9a9;
+	background-color:#FFF;
+	padding:20px 0;
+	z-index:1000;
+	box-shadow:0 1px 5px rgba(0,0,0,.1);
+	-webkit-transition:padding .3s ease;
+	transition:padding .3s ease;
+}
+.navbar.navbar-medical.navbar-general { position:fixed; }
+.navbar.navbar-medical.affix {
+	position:fixed;
+	padding:15px 0;
+}
+	.navbar.navbar-medical .navbar-brand {
+		position:relative;
+		height:auto;
+		padding:0;
+		margin:0;
+	}
+		.navbar.navbar-medical .navbar-brand img {
+			height:40px;
+			-webkit-transition:height .3s ease;
+			transition:height .3s ease;
+		}
+		.navbar.navbar-medical .navbar-brand .brand-secondary {
+			visibility:hidden;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			opacity:0;
+			-webkit-transition:visibility .3s ease, opacity .3s ease-out;
+			transition:visibility .3s ease, opacity .3s ease-out;
+		}
+		.navbar.navbar-medical.affix .navbar-brand.navbar-brand-affix .brand-secondary {
+			visibility:visible;
+			opacity:1;
+		}
+.navbar.navbar-medical .nav {
+	float:right;
+	height:40px;
+	font-size:15px;
+}
+	.navbar.navbar-medical .nav > li {
+		float:left;
+		padding:6px 20px;
+	}
+	.navbar.navbar-medical .nav > li:last-child { padding-right:0; }
+	.navbar.navbar-medical .nav > li.nav-menu-btn {
+		padding-top:1px;
+		padding-bottom:1px;
+	}
+		.navbar.navbar-medical .nav > li > a {
+			float:left;
+			position:relative;
+			color:#a9a9a9;
+		}
+		.navbar.navbar-medical .nav > li > a:hover, .navbar.navbar-medical .nav > li > a.active { color:#253c58; }
+		.navbar.navbar-medical .nav > li > a.nav-link { padding:0; }
+		.navbar.navbar-medical .nav > li.nav-menu-btn > a {
+			color:#FFF;
+			font-size:14px;
+			font-weight:600;
+			background-color:#2b8dd6;
+			padding:5px 20px;
+			outline:none;
+			border-radius:2px;
+		}
+		.navbar.navbar-medical .nav > li.nav-menu-btn > a:hover, .navbar.navbar-medical .nav > li.nav-menu-btn > a.active { background-color:#3ca3f0; }
+.navbar.navbar-medical .nav-btn-mobile {
+	display:none;
+	float:right;
+}
+	.navbar.navbar-medical .nav-btn-mobile a {
+		float:left;
+		color:#253c58;
+		font-size:34px;
+		line-height:40px;
+	}
+	.navbar.navbar-medical .nav-btn-mobile a:hover { color:#2b8dd6; }
+
+
+
+/* ========================= Header ========================= */
+
+.header-medical {
+	background-color:#FFF;
+	padding-bottom:200px;
+}
+	.header-medical .header-bg { padding:50px 0 1px; }
+	.header-medical .header-txt { padding-top:120px; }
+		.header-medical .header-txt h1 {
+			font-size:42px;
+			line-height:52px;
+			font-weight:400;
+			letter-spacing:.5px;
+			margin:0;
+		}
+		.header-medical .header-txt p {
+			font-family:Roboto, Arial, sans-serif;
+			font-size:24px;
+			line-height:36px;
+			margin:25px 0 0;
+		}
+		.header-medical .header-txt ul {
+			padding:0;
+			margin:40px 0 0;
+		}
+			.header-medical .header-txt ul li {
+				list-style-type:none;
+				position:relative;
+				min-height:30px;
+				color:#253c58;
+				font-size:18px;
+				line-height:30px;
+				font-weight:600;
+				padding-left:40px;
+				margin-bottom:20px;
+			}
+			.header-medical .header-txt ul li:last-child { margin-bottom:0; }
+				.header-medical .header-txt ul li .ion {
+					position:absolute;
+					top:0;
+					left:0;
+					width:24px;
+					color:#2b8dd6;
+					line-height:30px;
+					text-align:center;
+				}
+	.header-medical .header-btn { margin:55px -15px 0; }
+		.header-medical .header-btn .btn-custom {
+			display:inline-block;
+			line-height:22px;
+			margin:5px 15px;
+		}
+		.header-medical .header-btn p {
+			display:inline-block;
+			color:#a9a9a9;
+			font-size:18px;
+			font-weight:600;
+			vertical-align:bottom;
+			margin:16px 15px;
+		}
+	.header-medical .header-form {
+		overflow:hidden;
+		position:relative;
+		background-color:#FFF;
+		padding:40px 30px;
+		margin-bottom:-151px;
+		border-radius:4px;
+		box-shadow:0 0 30px 0 rgba(0,0,0,.1);
+	}
+		.header-medical .header-form .form-heading { margin-bottom:40px; }
+		.header-medical .header-form .form-fields input {
+			width:100%;
+			margin-bottom:30px;
+		}
+		.header-medical .header-form .form-submit { overflow:hidden; }
+			.header-medical .header-form .form-submit p {
+				float:left;
+				font-size:15px;
+				line-height:24px;
+				font-style:italic;
+				padding:13px 0;
+				margin:0 20px 0 0;
+			}
+			.header-medical .header-form .form-submit input { float:right; }
+		.header-medical .header-form .affa-form-signup { position:static; }
+			.header-medical .header-form .affa-form-signup .submit-status {
+				color:#253c58;
+				background-color:rgba(255,255,255,.7);
+				z-index:10;
+			}
+				.header-medical .header-form .affa-form-signup .submit-status p { z-index:11; }
+				.header-medical .header-form .affa-form-signup .submit-status p.success { color:#529552; }
+				.header-medical .header-form .affa-form-signup .submit-status p.error { color:#d86c6c; }
+
+
+
+/* ========================= Elements ========================= */
+
+.affa-feature-icon-medical {
+	overflow:hidden;
+	color:#555;
+	text-align:center;
+	background-color:#f8f8f8;
+	padding:30px;
+	margin-bottom:40px;
+	cursor:default;
+	border-radius:4px;
+	-webkit-transition:background .2s ease, box-shadow .2s ease-out;
+	transition:background .2s ease, box-shadow .2s ease-out;
+}
+.affa-bg-grey .affa-feature-icon-medical, .text-white .affa-feature-icon-medical { background-color:#FFF; }
+.affa-feature-icon-medical:hover {
+	background-color:#FFF;
+	box-shadow:0 0 30px 0 rgba(0,0,0,.1);
+}
+	.affa-feature-icon-medical .ion {
+		font-size:64px;
+		margin-bottom:25px;
+		-webkit-transition:color .2s ease;
+		transition:color .2s ease;
+	}
+	.affa-feature-icon-medical:hover .ion { color:#2b8dd6; }
+	.affa-feature-icon-medical h4 {
+		color:#253c58;
+		margin:0;
+	}
+	.affa-feature-icon-medical p { margin:15px 0 0 ; }
+
+.affa-team-medical {
+	overflow:hidden;
+	color:#555;
+	cursor:default;
+	border-radius:4px;
+	-webkit-transition:background .2s ease, box-shadow .2s ease-out;
+	transition:background .2s ease, box-shadow .2s ease-out;
+}
+.affa-team-medical:hover {
+	background-color:#FFF;
+	box-shadow:0 0 30px 0 rgba(0,0,0,.1);
+}
+.affa-bg-grey .affa-team-medical:hover, .text-white .affa-team-medical:hover { background-color:#f8f8f8; }
+	.affa-team-medical figure { padding:30px 80px 0; }
+	.affa-team-medical .team-txt {
+		text-align:center;
+		background-color:#f8f8f8;
+		padding:30px;
+	}
+	.affa-bg-grey .affa-team-medical .team-txt, .text-white .affa-team-medical .team-txt { background-color:#FFF; }
+		.affa-team-medical .team-txt .team-name h4 {
+			color:#253c58;
+			margin:0;
+		}
+		.affa-team-medical .team-txt .team-name p {
+			color:#999;
+			margin:5px 0 0;
+		}
+		.affa-team-medical .team-txt .team-desc { margin-top:20px; }
+			.affa-team-medical .team-txt .team-desc p { margin:0; }
+		.affa-team-medical .team-txt .team-socials {
+			padding:0;
+			margin:10px 0 -10px;
+		}
+			.affa-team-medical .team-txt .team-socials li {
+				list-style-type:none;
+				display:inline-block;
+				margin:10px 8px;
+			}
+				.affa-team-medical .team-txt .team-socials li a {
+					display:block;
+					width:40px;
+					height:40px;
+					color:#2b8dd6;
+					font-size:18px;
+					line-height:38px;
+					text-align:center;
+					border:1px solid #e0e0e0;
+					border-radius:50%;
+				}
+				.affa-bg-grey .affa-team-medical .team-txt .team-socials li a, .text-white .affa-team-medical .team-txt .team-socials li a { border-color:#EEE; }
+				.affa-team-medical .team-txt .team-socials li a:hover {
+					color:#FFF;
+					background-color:#2b8dd6;
+					border-color:#2b8dd6;
+				}
+
+.carousel-slider.slick-slider.teams-medical-slider {
+	padding-bottom:50px;
+	margin-top:-15px;
+}
+	.carousel-slider.teams-medical-slider .slick-dots { bottom:0; }
+		.carousel-slider.slick-slider.teams-medical-slider .slick-dots li {
+			width:30px;
+			height:6px;
+		}
+			.carousel-slider.slick-slider.teams-medical-slider .slick-dots li button {
+				width:30px;
+				height:6px;
+				background-color:#2b8dd6;
+				opacity:.2;
+				border-radius:2px;
+			}
+			.carousel-slider.slick-slider.teams-medical-slider .slick-dots li button:hover, .carousel-slider.slick-slider.teams-medical-slider .slick-dots li.slick-active button { opacity:1; }
+.carousel-slider.slick-slider.teams-medical-slider .slick-list { margin:0 -15px; }
+.carousel-slider.slick-slider.teams-medical-slider .slick-slide { padding:15px 15px; }
+
+.affa-testimonial-medical { text-align:center; }
+	.affa-testimonial-medical .testimonial-txt {
+		position:relative;
+		min-height:64px;
+		font-family:Roboto, Arial, sans-serif;
+		color:#253c58;
+		font-size:24px;
+		line-height:36px;
+		font-weight:500;
+		padding:24px 30px 0;
+	}
+	.text-white .affa-testimonial-medical .testimonial-txt { color:#FFF; }
+	.affa-testimonial-medical .testimonial-txt:before {
+		position:absolute;
+		top:0;
+		left:0;
+		font-family:Ionicons;
+		color:rgba(37,60,88,.1);
+		font-size:64px;
+		line-height:1;
+		content:'\f347';
+	}
+	.text-white .affa-testimonial-medical .testimonial-txt:before { color:rgba(255,255,255,.1); }
+		.affa-testimonial-medical .testimonial-txt p { margin:0; }
+	.affa-testimonial-medical .testimonial-rating {
+		color:#ff6d21;
+		font-size:26px;
+		line-height:1;
+		margin-top:30px;
+	}
+		.affa-testimonial-medical .testimonial-rating .ion {
+			line-height:28px;
+			margin:0 1px;
+		}
+	.affa-testimonial-medical .testimonial-name {
+		display:inline-block;
+		position:relative;
+		min-height:60px;
+		text-align:left;
+		padding:2px 0 0 80px;
+		margin-top:25px;
+	}
+		.affa-testimonial-medical .testimonial-name img {
+			position:absolute;
+			top:0;
+			left:0;
+			width:60px;
+			height:60px;
+			border-radius:50%;
+		}
+		.affa-testimonial-medical .testimonial-name h4 {
+			color:#555;
+			font-size:18px;
+			line-height:26px;
+			margin:0;
+		}
+		.text-white .affa-testimonial-medical .testimonial-name h4 { color:#FFF; }
+		.affa-testimonial-medical .testimonial-name p {
+			color:#999;
+			margin:2px 0 0;
+		}
+		.text-white .affa-testimonial-medical .testimonial-name p { color:#FFF; }
+
+.carousel-slider.slick-slider.testimonials-medical-slider { padding-bottom:60px; }
+	.carousel-slider.testimonials-medical-slider .slick-dots { bottom:0; }
+		.carousel-slider.slick-slider.testimonials-medical-slider .slick-dots li {
+			width:30px;
+			height:6px;
+		}
+			.carousel-slider.slick-slider.testimonials-medical-slider .slick-dots li button {
+				width:30px;
+				height:6px;
+				background-color:#2b8dd6;
+				opacity:.2;
+				border-radius:2px;
+			}
+			.carousel-slider.slick-slider.testimonials-medical-slider .slick-dots li button:hover, .carousel-slider.slick-slider.testimonials-medical-slider .slick-dots li.slick-active button { opacity:1; }
+
+.affa-faq-medical {
+	overflow:hidden;
+	color:#555;
+	background-color:#f8f8f8;
+	padding:30px;
+	margin-bottom:30px;
+	cursor:default;
+	border-radius:4px;
+	-webkit-transition:background .2s ease, box-shadow .2s ease-out;
+	transition:background .2s ease, box-shadow .2s ease-out;
+}
+.affa-bg-grey .affa-faq-medical, .text-white .affa-faq-medical { background-color:#FFF; }
+.affa-faq-medical:hover {
+	background-color:#FFF;
+	box-shadow:0 0 30px 0 rgba(0,0,0,.1);
+}
+	.affa-faq-medical h4 {
+		color:#253c58;
+		font-size:18px;
+		line-height:26px;
+		margin-bottom:5px;
+	}
+	.affa-faq-medical p:last-child { margin:0; }
+
+.affa-subscribe-medical .subscribe-heading {
+	text-align:center;
+	padding:0 60px;
+	margin-bottom:40px;
+}
+	.affa-subscribe-medical .subscribe-heading h2 {
+		color:#2b8dd6;
+		font-size:34px;
+		line-height:44px;
+		margin:0;
+	}
+	.affa-subscribe-medical .subscribe-heading p {
+		font-family:Roboto, Arial, sans-serif;
+		color:#a9a9a9;
+		font-size:18px;
+		font-weight:500;
+		margin:5px 0 0;
+	}
+	.text-white .affa-subscribe-medical .subscribe-heading h2, .text-white .affa-subscribe-medical .subscribe-heading p { color:#FFF; }
+.affa-subscribe-medical .affa-form-subscribe {
+	position:relative;
+	max-width:740px;
+	padding-right:160px;
+	margin:0 auto;
+}
+	.affa-subscribe-medical .affa-form-subscribe input[type="text"], .affa-subscribe-medical .affa-form-subscribe input[type="email"] {
+		border-right-width:0;
+		border-radius:2px 0 0 2px;
+	}
+	.affa-subscribe-medical .affa-form-subscribe input[type="submit"] {
+		position:absolute;
+		top:0;
+		right:0;
+		width:160px;
+		text-align:center;
+		padding-right:0;
+		padding-left:0;
+		border-radius:0 2px 2px 0;
+	}
+
+.affa-callout-medical { text-align:center; }
+	.affa-callout-medical h2 {
+		font-size:48px;
+		line-height:58px;
+		margin:0;
+	}
+	.affa-callout-medical .callout-btn { margin-top:40px; }
+
+
+
+/* ========================= Footer ========================= */
+
+.footer-medical .footer-widgets { padding-top:60px; }
+	.footer-medical .footer-widgets .widget { margin-bottom:40px; }
+		.footer-medical .footer-widgets .widget .widget-title { margin-bottom:25px; }
+
+.footer-medical .footer-nav {
+	overflow:hidden;
+	position:relative;
+	min-height:28px;
+	color:#253c58;
+	padding:27px 0;
+}
+	.footer-medical .footer-nav a { color:#253c58; }
+	.footer-medical .footer-nav a:hover { color:#2b8dd6; }
+	.footer-medical .footer-nav .footer-logo {
+		float:left;
+		line-height:0;
+	}
+		.footer-medical .footer-nav .footer-logo img { height:28px; }
+	.footer-medical .footer-nav .footer-copyright {
+		position:absolute;
+		top:27px;
+		right:285px;
+		left:285px;
+		font-size:15px;
+		text-align:center;
+		margin:0;
+	}
+		.footer-medical .footer-nav .footer-copyright p { margin:0; }
+	.footer-medical .footer-nav .footer-socials {
+		float:right;
+		padding:0;
+		margin:0 -15px 0 0;
+	}
+		.footer-medical .footer-nav .footer-socials li {
+			display:inline-block;
+			list-style-type:none;
+			font-size:20px;
+			line-height:28px;
+			vertical-align:top;
+			margin:0 15px;
+		}
+
+
+
+/* ========================= Media Queries ========================= */
+
+@media (max-width: 1199px) {
+
+	.navbar.navbar-medical .nav > li {
+		padding-right:14px;
+		padding-left:14px;
+	}
+	.navbar.navbar-medical .nav > li.nav-menu-btn > a {
+		padding-right:15px;
+		padding-left:15px;
+	}
+
+	.header-medical .header-txt { padding-top:100px; }
+
+	.footer-medical .footer-nav .footer-copyright {
+		right:245px;
+		left:245px;
+	}
+
+	.affa-subscribe-medical .subscribe-heading { padding:0; }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.header-medical .header-btn { margin-top:45px; }
+
+	.affa-feature-icon-medical, .affa-team-medical .team-txt, .affa-faq-medical { padding:25px; }
+
+	.affa-team-medical figure { padding:25px 50px 0; }
+
+}
+
+@media (max-width: 991px) {
+
+	.navbar.navbar-medical .nav > li {
+		padding-right:8px;
+		padding-left:8px;
+	}
+	.navbar.navbar-medical .nav > li.nav-menu-btn > a {
+		padding-right:10px;
+		padding-left:10px;
+	}
+
+	.header-medical .header-txt { padding-top:10px; }
+
+	.footer-medical .footer-nav .footer-copyright {
+		right:235px;
+		left:150px;
+	}
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+	.header-medical .header-txt h1 {
+		font-size:36px;
+		line-height:46px;
+	}
+	.header-medical .header-txt p {
+		font-size:22px;
+		line-height:34px;
+		margin-top:20px;
+	}
+	.header-medical .header-txt ul { margin-top:30px; }
+	.header-medical .header-txt ul li {
+		min-height:26px;
+		font-size:16px;
+		line-height:28px;
+		padding-left:35px;
+	}
+	.header-medical .header-txt ul li .ion {
+		width:22px;
+		line-height:28px;
+	}
+	.header-medical .header-btn { margin-top:35px; }
+
+	.affa-feature-icon-medical, .affa-team-medical .team-txt, .affa-faq-medical { padding:20px; }
+
+	.affa-team-medical figure { padding:20px 20px 0; }
+
+}
+
+@media (max-width: 767px) {
+
+	.post-heading-left-medical h2, .post-heading-center-medical h2 {
+		font-size:36px;
+		line-height:46px;
+	}
+
+	body.nav-mobile-open .navbar.navbar-medical.affix {
+		right:50%;
+		left:-50%;
+	}
+	.navbar.navbar-medical.affix { padding:13px 0; }
+	.navbar.navbar-medical.affix .navbar-brand img { height:34px; }
+	.navbar.navbar-medical .nav { display:none; }
+	.navbar.navbar-medical .nav-btn-mobile { display:block; }
+	.navbar.navbar-medical.affix .nav-btn-mobile a { line-height:1; }
+
+	.header-medical .header-txt {
+		padding-top:0;
+		margin-bottom:40px;
+	}
+	.header-medical .header-txt h1 {
+		font-size:36px;
+		line-height:46px;
+	}
+	.header-medical .header-txt p {
+		font-size:22px;
+		line-height:34px;
+		margin-top:20px;
+	}
+	.header-medical .header-txt ul { margin-top:30px; }
+	.header-medical .header-btn {
+		margin-top:-5px;
+		margin-bottom:35px;
+	}
+	.header-medical .header-img { padding:0 15%; }
+	.header-medical .header-form { padding:30px; }
+	.header-medical .header-form .form-heading { margin-bottom:30px; }
+	.header-medical .header-form .form-submit p {
+		float:none;
+		padding:0;
+		margin:0 0 30px;
+	}
+	.header-medical .header-form .form-submit input {
+		width:100%;
+		text-align:center;
+		padding-right:0;
+		padding-left:0;
+		float:none;
+	}
+
+	.affa-testimonial-medical .testimonial-txt {
+		min-height:56px;
+		font-size:20px;
+		line-height:32px;
+		padding:20px 26px 0;
+	}
+	.affa-testimonial-medical .testimonial-txt:before { font-size:56px; }
+
+	.affa-callout-medical h2 {
+		font-size:40px;
+		line-height:50px;
+	}
+
+	.footer-medical .footer-nav {
+		text-align:center;
+		padding:10px 0 20px;
+	}
+	.footer-medical .footer-nav .footer-logo, .footer-medical .footer-nav .footer-socials { float:none; }
+	.footer-medical .footer-nav .footer-logo { padding:10px 0; }
+	.footer-medical .footer-nav .footer-logo img {
+		height:auto;
+		max-height:40px;
+	}
+	.footer-medical .footer-nav .footer-copyright {
+		position:static;
+		top:auto;
+		right:auto;
+		left:auto;
+		padding:10px 0;
+	}
+	.footer-medical .footer-nav .footer-socials li {
+		font-size:24px;
+		line-height:44px;
+	}
+
+}
+
+@media (max-width: 640px) {
+
+	body.nav-mobile-open .navbar.navbar-medical.affix {
+		right:60%;
+		left:-60%;
+	}
+
+}
+
+@media (max-width: 560px) {
+
+	.header-medical .header-img { padding:0 10%; }
+
+	.header-medical .header-form, .affa-feature-icon-medical, .affa-team-medical .team-txt, .affa-faq-medical { padding:25px; }
+
+	.affa-team-medical figure { padding:25px 50px 0; }
+
+}
+
+@media (max-width: 480px) {
+
+	body.nav-mobile-open .navbar.navbar-medical.affix {
+		right:70%;
+		left:-70%;
+	}
+
+	.header-medical .header-img { padding:0 5%; }
+
+	.affa-team-medical figure { padding:20px 20px 0; }
+
+}
+
+@media (max-width: 400px) {
+
+	body.nav-mobile-open .navbar.navbar-medical.affix {
+		right:80%;
+		left:-80%;
+	}
+
+	.header-medical .header-img { padding:0; }
+	.header-medical .header-form { padding:20px; }
+	.header-medical .header-form .form-heading, .header-medical .header-form .form-fields input, .header-medical .header-form .form-submit p { margin-bottom:20px; }
+
+	.affa-feature-icon-medical, .affa-team-medical .team-txt, .affa-faq-medical { padding:20px; }
+
+	.affa-testimonial-medical .testimonial-name {
+		display:block;
+		min-height:0;
+		text-align:center;
+		padding:0;
+	}
+	.affa-testimonial-medical .testimonial-name img {
+		display:inline-block;
+		position:static;
+		top:auto;
+		left:auto;
+		width:80px;
+		height:80px;
+		margin-bottom:15px;
+	}
+
+	.affa-subscribe-medical .affa-form-subscribe { padding-right:0; }
+	.affa-subscribe-medical .affa-form-subscribe input[type="text"], .affa-subscribe-medical .affa-form-subscribe input[type="email"] {
+		border-right-width:1px;
+		border-radius:2px;
+	}
+	.affa-subscribe-medical .affa-form-subscribe input[type="submit"] {
+		position:static;
+		top:auto;
+		right:auto;
+		width:100%;
+		margin-top:15px;
+		border-radius:2px;
+	}
+
+}
