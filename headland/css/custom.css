@@ -1,0 +1,14 @@
+.bg-footer {background-color: #444444;}
+
+.text-custom2 {color: #0000CC;fill:#0000CC;}
+
+.section2 {padding-top: 100px; padding-bottom: 10px; position: relative;background-repeat: no-repeat;background-position: center;background-attachment: scroll;background-size: cover;}
+
+.section3 {padding-top: 10px; padding-bottom: 100px; position: relative;background-repeat: no-repeat;background-position: center;background-attachment: scroll;background-size: cover;}
+
+.bg-partner {background-color: #DDDDDD;}
+
+.bg-overlay2 {background-color:#DDDDDD;opacity: 0.7;position:absolute;left:0;right:0;top: 0;bottom: 0;width: 100%;height: 100%;display: block;}
+.bg-overlay-gradient2 {position:absolute;left:0;right:0;top: 0;bottom: 0;width: 100%;height: 100%;display: block;}
+
+.header-sticky2 {background-color: #444444;-moz-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); -webkit-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09);}
