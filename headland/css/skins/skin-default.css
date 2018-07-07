@@ -22,7 +22,7 @@
 .btn-custom:active,
 .btn-custom:focus,
 .btn-custom:hover,
-.open > .dropdown-toggle.btn-custom {color: #fff; background-color: #1f64d6; border-color: #1f64d6;}
+.open > .dropdown-toggle.btn-custom {color: #fff; background-color: #cf4911; border-color: #cf4911;}
 
 .text-custom,
 .navbar-custom .navbar-nav .show > .nav-link,

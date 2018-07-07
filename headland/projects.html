@@ -17,6 +17,26 @@
     <link rel="stylesheet" href="css/helper.css"><!-- Helper Css -->
     <link id="color-opt" rel="stylesheet" href="css/skins/skin-default.css"><!-- Skins color Css -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/ninja-slider.css" />
+    <script src="js/ninja-slider.js"></script>
+    <script>
+        function lightbox(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+
+        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                ninjaSldr.parentNode.style.display = "none";
+            }
+        }
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117908572-1"></script>
     <script>
@@ -51,7 +71,7 @@
     <header class="header fixed-top header-sticky2">
         <nav class="navbar navbar-expand-lg p-0 navbar-custom">
             <div class="header-logo">
-                <a class="navbar-brand d-flex align-items-center" href="index-3.html">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <span class="fw-9 text-custom2">VTA Event Media</span>
                 </a>
             </div>
@@ -98,8 +118,8 @@
                         <div class="messages"></div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-12 col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <div class="position-relative">
                                 <input class="form-control" type="text" name="name" placeholder="Họ tên*" required="required" data-error="Your Name is required.">
@@ -108,7 +128,7 @@
                             <div class="help-block with-errors text-danger"></div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-3">
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <div class="position-relative">
                                 <input class="form-control" type="email" name="email" placeholder="Email*" required="required" data-error="Your Email is required.">
@@ -118,8 +138,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-12 col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <div class="position-relative">
                                 <input class="form-control" type="text" name="phone" placeholder="Điện thoại">
@@ -128,7 +148,7 @@
                             <div class="help-block with-errors text-danger"></div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-3">
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <div class="position-relative">
                                 <input class="form-control" type="text" name="subject" placeholder="Tiêu đề*" required="required" data-error="Your Subject is required.">
@@ -138,8 +158,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-12 col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
                         <div class="form-group">
                             <div class="position-relative">
                                 <textarea class="form-control" name="message" placeholder="Nội dung*" rows="3" required="required" data-error="Please,leave us a message."></textarea>
@@ -158,18 +178,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="media mt-3 mb-30 text-center">
+                        <span class="icon-map-pin h2 align-self-center"></span>
                         <div class="media-body pl-3">
                             <h6 class="mb-1 text-black fw-6">ĐỊA CHỈ:</h6>
                             <p>658 Bạch Đằng - Hai Bà Trưng - Hà Nội</p>
                         </div>
                     </div>
                     <div class="media mt-3 mb-30 text-center">
+                        <span class="icon-envelope h2 align-self-center"></span>
                         <div class="media-body pl-3">
                             <h6 class="mb-1 text-black fw-6">EMAIL:</h6>
                             <p>info@vtaevent.vn</p>
                         </div>
                     </div>
                     <div class="media mt-3 mb-30 text-center">
+                        <span class="icon-phone h2 align-self-center"></span>
                         <div class="media-body pl-3">
                             <h6 class="mb-1 text-black fw-6">ĐIỆN THOẠI:</h6>
                             <p>024.6253.3226</p>
@@ -178,6 +201,7 @@
                     
                     
                     <div class="media mt-3 mb-30 text-center">
+                        <span class="icon-chat h2 align-self-center"></span>
                         <div class="media-body pl-3">
                             <h6 class="mb-1 text-black fw-6">LIVE CHAT:</h6>
                             <p>We are here to help you 24/7</p>
@@ -237,7 +261,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/1.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -253,7 +277,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/2.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -269,7 +293,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/3.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +309,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/4.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +325,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/5.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -317,7 +341,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/6.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -333,7 +357,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/7.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -349,7 +373,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/8.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -365,7 +389,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/1.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -389,6 +413,53 @@
     </section>
     <!-- End Creative Work
     ================================================== -->
+
+    <!--start-->
+    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/abc.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/a.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 2</h3>
+                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ns-img" style="background-image:url(img/b.jpg);"></span>
+                        <div class="caption">
+                            <h3>Dummy Caption 3</h3>
+                            <p>Duis fringilla arcu convallis urna commodo, et tempus velit posuere.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/c.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 4</h3>
+                            <p>Quisque semper dolor sed neque consequat scelerisque at sed ex. Nam gravida massa.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/d.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 5</h3>
+                            <p>Proin non dui at metus suscipit bibendum.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+    <!--end-->
 
     <!-- Start Footer
     ================================================== -->

@@ -17,6 +17,26 @@
     <link rel="stylesheet" href="css/helper.css"><!-- Helper Css -->
     <link id="color-opt" rel="stylesheet" href="css/skins/skin-default.css"><!-- Skins color Css -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/ninja-slider.css" />
+    <script src="js/ninja-slider.js"></script>
+    <script>
+        function lightbox(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+
+        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                ninjaSldr.parentNode.style.display = "none";
+            }
+        }
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117908572-1"></script>
     <script>
@@ -339,7 +359,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/1.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +375,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/2.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -371,7 +391,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/3.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -387,7 +407,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/4.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -403,7 +423,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/5.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -419,7 +439,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/6.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -435,7 +455,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/7.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -451,7 +471,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/8.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +487,7 @@
                                 <div>
                                     <h6 class="text-uppercase mb-2 fw-6">Vinamilk</h6>
                                     <p class="mb-0">https://www.vinamilk.com.vn</p>
-                                    <a class="portfolio-box-view bg-custom text-custom popup-image" href="images/portfolio/1.jpg"><span class="ti-eye"></span></a>
+                                    <a class="portfolio-box-view bg-custom text-custom" onclick="lightbox(0)"><span class="ti-eye"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -483,6 +503,53 @@
     </section>
     <!-- End Creative Work
     ================================================== -->
+
+    <!--start-->
+    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/abc.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan purus.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/a.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 2</h3>
+                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ns-img" style="background-image:url(img/b.jpg);"></span>
+                        <div class="caption">
+                            <h3>Dummy Caption 3</h3>
+                            <p>Duis fringilla arcu convallis urna commodo, et tempus velit posuere.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/c.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 4</h3>
+                            <p>Quisque semper dolor sed neque consequat scelerisque at sed ex. Nam gravida massa.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/d.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 5</h3>
+                            <p>Proin non dui at metus suscipit bibendum.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+    <!--end-->
 
     <div class="pt-50 pb-50 bg-partner">
         <div class="container">
@@ -536,10 +603,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -555,10 +619,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -574,10 +635,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -593,10 +651,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -620,10 +675,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -639,10 +691,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -658,10 +707,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">
@@ -677,10 +723,7 @@
                                 </div>
                                 <div class="team-overlay"></div>
                                 <div class="team-social">
-                                    <a class="social-hover fab fa-facebook-f" href="#"></a>
-                                    <a class="social-hover fab fa-twitter" href="#"></a>
-                                    <a class="social-hover fab fa-linkedin-in" href="#"></a>
-                                    <a class="social-hover fab fa-google-plus-g" href="#"></a>
+                                    <a class="social-hover ti-eye" href="#"></a>
                                 </div>
                             </div>
                             <div class="team-meta">

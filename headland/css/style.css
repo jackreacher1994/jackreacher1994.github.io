@@ -100,7 +100,7 @@ p:last-child {margin-bottom: 0;}
 ============================================= */
 .sticky-wrapper {height: auto !important;transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
 .header {width: 100% !important; border-bottom:1px solid rgba(255,255,255,0.1);z-index: 1030 !important;transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
-.header.header-sticky {background-color: #444444;-moz-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); -webkit-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09);}
+.header.header-sticky {background-color: #191919;-moz-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); -webkit-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09);}
 .navbar-custom {min-height: 80px;}
 .header-logo {display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-negative: 0; flex-shrink: 0; height: 100%; margin-right: auto; text-align: center; }
 .header-logo .navbar-brand {min-height: 80px; padding: 0 15px; letter-spacing: 2px; margin-right: 0;color: #fff;}

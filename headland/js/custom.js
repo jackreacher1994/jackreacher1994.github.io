@@ -26,3 +26,10 @@ $('#team-slider2').owlCarousel({
         },
     }
 });
+
+$('#myModal').on('show.bs.modal', function (e) {
+    $('.modal .modal-dialog').attr('class', 'modal-dialog bounceIn animated');
+})
+$('#myModal').on('hide.bs.modal', function (e) {
+    $('.modal .modal-dialog').attr('class', 'modal-dialog flipOutX animated');
+})

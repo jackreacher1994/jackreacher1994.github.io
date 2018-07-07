@@ -1,6 +1,6 @@
-.bg-footer {background-color: #444444;}
+.bg-footer {background-color: #191919;}
 
-.text-custom2 {color: #0000CC;fill:#0000CC;}
+.text-custom2 {color: #cf4911;fill:#cf4911;}
 
 .section2 {padding-top: 100px; padding-bottom: 10px; position: relative;background-repeat: no-repeat;background-position: center;background-attachment: scroll;background-size: cover;}
 
@@ -11,4 +11,18 @@
 .bg-overlay2 {background-color:#DDDDDD;opacity: 0.7;position:absolute;left:0;right:0;top: 0;bottom: 0;width: 100%;height: 100%;display: block;}
 .bg-overlay-gradient2 {position:absolute;left:0;right:0;top: 0;bottom: 0;width: 100%;height: 100%;display: block;}
 
-.header-sticky2 {background-color: #444444;-moz-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); -webkit-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09);}
+.header-sticky2 {background-color: #191919;-moz-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); -webkit-box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09); box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.09);}
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
+.my-no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
